@@ -31,7 +31,7 @@
   </head>
   <body>
     <div style="width: 500px; margin: 20px auto 0px;background-color: #eee; padding-left: 75px;">
-        <h1 padding="0px;">Registrasi</h1>
+        <h2 class="font-weight-bold" style="padding-left: 100px; font-family: arial;">Registrasi</h2>
     <form action="" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
@@ -75,10 +75,10 @@
           </div>
           <div class="form-group">
             <div class="col-sm-10">
-              <button class="btn btn-warning" type="submit" name="register" class="btn btn-primary">Register!!</button>
+              <button class="btn btn-warning text-center font-weight-bold" style="width: 325px;" type="submit" name="register">Daftar</button>
             </div>
           </div>
-          <h6>Sudah daftar?  <a href="login.php">Klik disini</a></h6>
+          <h6 class="pl-3">Sudah daftar?  <a href="login.php">Klik disini</a></h6>
     </form>
     </div>
 
