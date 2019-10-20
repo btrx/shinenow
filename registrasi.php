@@ -3,9 +3,10 @@
   if(isset($_POST["register"])) {
     if(registrasi($_POST) > 0) {
       echo "<script>
-              alert ('User berhasil ditambahkan');
+              alert ('Selamat, registrasi berhasil');
+              document.location.href = 'login.php';
             </script>";
-     header ("Location: login.php");
+     // header ("Location: login.php");
     } else {
       echo mysqli_error($conn);
     }

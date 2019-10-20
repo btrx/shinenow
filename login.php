@@ -7,15 +7,11 @@
               $_SESSION['login'] = true;
               header("Location: home.php");
               exit;
-      } 
-      
-      if (loginAdmin($_POST) > 0 ) {
+      } else if (loginAdmin($_POST) > 0 ) {
               $_SESSION['login'] = true;
               header("Location: admin.php");
               exit;
-      } 
-      
-      if (loginSuperAdmin($_POST) > 0){
+      } else if (loginSuperAdmin($_POST) > 0){
              $_SESSION['login'] = true;
               header("Location: s_admin.php");
               exit;
