@@ -61,8 +61,8 @@
 
           </ul>
                 <a class="nav-link btn btn-light  mx-2" href="#">Jadilah tutor</a>
-                <a class="nav-link btn btn-outline-dark" href="#">Masuk</a>
-                <a class="nav-link btn btn-danger mx-2" href="#">Daftar</a>
+                <a class="nav-link btn btn-outline-dark" href="login.php">Masuk</a>
+                <a class="nav-link btn btn-danger mx-2" href="registrasi.php">Daftar</a>
             
 
           
