@@ -1,5 +1,12 @@
 <?php 	
 	require "function.php";
+  session_start();
+    if (!isset($_SESSION['login'])) {
+      echo "<script>
+              alert ('maaf, anda belum login');
+              document.location.href = 'login.php';
+            </script>";
+    }
 
 	if (isset($_POST['tambah'])) {
 		if(tambahAdmin($_POST) > 0){

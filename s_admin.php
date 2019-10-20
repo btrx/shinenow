@@ -2,7 +2,10 @@
 	require "function.php"; 
 		session_start();
 		if (!isset($_SESSION['login'])) {
-			header ("Location : login.php");
+			echo "<script>
+              alert ('maaf, anda belum login');
+              document.location.href = 'login.php';
+            </script>";
 		}
 
 		$admins = admin("SELECT * FROM admin");

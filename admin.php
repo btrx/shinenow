@@ -1,9 +1,12 @@
 <?php
 	session_start();
 	require "function.php"; 
-	
+
 	if (!isset($_SESSION['login'])) {
-		header ("Location : login.php");
+		echo "<script>
+              alert ('maaf, anda belum login');
+              document.location.href = 'login.php';
+            </script>";
 	}
 
 	$users = user("SELECT * FROM user");
