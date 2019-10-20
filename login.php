@@ -42,27 +42,27 @@
     <title>Halaman Login</title>
   </head>
   <body>
-    <div style="width: 500px; margin: 20px auto 0px;">
-        <h1 style="margin: 50px 190px;">Login</h1>
+     <div style="width: 500px; height: 655px; margin: 20px auto 0px;background-color: #eee; padding-left: 75px;">
+        <h2 class="font-weight-bold" style="padding-left: 120px; font-family: arial;">Login</h2>
     <form action="" method="post">
-          <div class="form-group row">
+          <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">
               <input type="text" name="username" class="form-control" id="inputEmail3" placeholder="Username">
             </div>
           </div>
-          <div class="form-group row">
+          <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-10">
               <input type="password" name="password" class="form-control" id="inputEmail3" placeholder="Password">
             </div>
           </div>
-          <div class="form-group row">
+          <div class="form-group">
             <div class="col-sm-10">
-              <button type="submit" name="login" class="btn btn-primary">Login</button>
+              <button class="btn btn-warning text-center font-weight-bold" style="width: 325px;" type="submit" name="login">Login</button>
             </div>
           </div>
-          <h6>Belum daftar?  <a href="registrasi.php">Klik disini</a></h6>
+          <h6 class="pl-3">Belum daftar?  <a href="registrasi.php">Klik disini</a></h6>
     </form>
     </div>
 
