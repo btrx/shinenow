@@ -12,7 +12,7 @@ function registrasi($data) {
 	$jkel = strtolower(stripslashes($data["jns_kelamin"]));
 	$alamat = strtolower(stripslashes($data["alamat"]));
 	$email = strtolower(stripslashes($data["email"]));
-	$foto = strtolower(stripslashes($data["foto"]));
+	// $foto = strtolower(stripslashes($data["foto"]));
 
 	// cek username sudah ada apa belum
 	$result = mysqli_query($conn,"SELECT username FROM user WHERE username = '$username'");
@@ -27,7 +27,7 @@ function registrasi($data) {
 	$password = password_hash($password, PASSWORD_DEFAULT);
 
 	// insert ke dalam database
-	mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$password', '$nama', '$jkel', '$alamat', '$email' , '$foto')");
+	mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$password', '$nama', '$jkel', '$alamat', '$email', '')");
 
 	// menghasilkan angka 1 jika berhasil dan -1 jika gagal
 	return mysqli_affected_rows($conn);
