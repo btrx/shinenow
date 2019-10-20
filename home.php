@@ -65,25 +65,6 @@
                       <a class="button rounded-circle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="20px" height="20px">
                       U
                       </a>
-                      <div class="dropdown-menu dropdown-menu-right mt-2">
-                          <form class="px-4 py-3">
-                              <div class="form-group">
-                                  <label for="exampleDropdownFormEmail1">Nama</label>
-                                  <input type="username" class="form-control" id="exampleDropdownFormName" placeholder="Nama">
-                                </div>
-                            <div class="form-group">
-                              <label for="exampleDropdownFormEmail1">Surel</label>
-                              <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Surel">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleDropdownFormPassword1">Kata sandi</label>
-                              <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Kata sandi">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Daftar</button>
-                          </form>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Sudah punya akun? Masuk</a>
-                        </div>
                     </div>
             
 
