@@ -6,15 +6,12 @@
       if (login($_POST) > 0 ) {
               $_SESSION['login'] = true;
               header("Location: home.php");
-              exit;
       } else if (loginAdmin($_POST) > 0 ) {
               $_SESSION['login'] = true;
               header("Location: admin.php");
-              exit;
       } else if (loginSuperAdmin($_POST) > 0){
              $_SESSION['login'] = true;
               header("Location: s_admin.php");
-              exit;
       }else {
         echo "<script>
               alert ('username atau password anda salah!!');
