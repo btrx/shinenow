@@ -52,8 +52,10 @@ function registrasi($data) {
  		// cek password
  		$row = mysqli_fetch_assoc($result);
  		if(password_verify($password, $row["password"])) {
+ 			if($username != '' && $password != ''){
  			// menghasilkan angka 1 jika berhasil dan -1 jika gagal
  			return mysqli_affected_rows($conn);
+ 				}
  			}
  		}
 	}
