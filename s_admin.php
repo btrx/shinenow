@@ -51,7 +51,7 @@
 					<td><?= $admin["username"];?></td>
 					<td><?= $admin["password"]; ?></td>
 					<td>
-						<a href="hapus_admin.php?id=<?= $admin['id'];?>">Hapus</a>
+						<a href="hapus_admin.php?id=<?= $admin['id'];?>" onclick=" return confirm ('Anda yakin?')">Hapus</a>
 					</td>
 				</tr>
 				<?php $i++; ?>

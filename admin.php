@@ -1,7 +1,6 @@
 <?php
-	session_start();
 	require "function.php"; 
-
+	session_start();
 	if (!isset($_SESSION['login'])) {
 		echo "<script>
               alert ('maaf, anda belum login');
@@ -59,7 +58,7 @@
 					<td><?= $user["email"]; ?></td>
 					<td><?= $user["gambar"]; ?></td>
 					<td>
-						<a href="hapus_user.php?id=<?= $user['id'];?>">Hapus</a>
+						<a href="hapus_user.php?id=<?= $user['id'];?>" onclick=" return confirm ('Anda yakin');">Hapus</a>
 					</td>
 				</tr>
 				<?php $i++; ?>
