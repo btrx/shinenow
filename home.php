@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/custom.css" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom-style.css" >
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Shine Now</title>
   </head>
 
@@ -72,25 +72,29 @@
         </div>
       </nav>
       <nav>
-      <div class="container mt-5 width=250px height=250px">
+        <div class="container mt-4 height:130px; width:230px">
           <h3>
                <small class="text-muted">Kursus yang anda ikuti</small>
-             </h3>
-           <div class="card-deck" >
-                 
-                   <div class="card mx-1 shadow-sm">
-                      <span class="badge  badge-warning w-50 mt-2"></span>
-                     <img class="card-img-top h-50"    src="images/petrik.png" alt="Card image cap">
-                     <div class="card-body px-2">
-                       <h6>Teknik membersihkan hidung yang mantab</h6>
-                       <p class="card-text" style="font-size: 11px;">Petrik</p>
-                       <p class="card-text"><small class="text-muted">
-                     </div>
-                   </div>
-                   
-
+          </h3>
+          <div class="card flex-row flex-wrap" style="height:150px; width:400px" >
+            <div class="card-header border-0">
+              <img src="images/sponbob.png" alt="" style="width:227px; height:125px ">
+          </div>
+          <div class="card-block px-2">
+            <h4 class="card-tittle">Tittle</h4>
+            <p class="card-text">desc</p>
+            <a href="#" class="btn btn-primary">btn</a>
+          </div>
+          <div class="progress"></div>
+          <div class="progress-bar progress-bar-striped active" role="progressbar"
+           aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%;height:14px">
+           40%
+          </div>
+        </div>
       </nav>
-       <div class="container mt-5" >
+  </div>
+</div>
+       <div class="container mt-6" >
           <h3>
                <small class="text-muted">Kursus Populer "Teknologi"</small>
              </h3>
@@ -547,7 +551,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
     $(function () {
       $('[data-toggle="popover"]').popover()

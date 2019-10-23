@@ -6680,6 +6680,15 @@ button.bg-dark:focus {
 .my-5 {
   margin-top: 3rem !important; }
 
+.mt-6,
+.my-6 {
+  margin-top: 6rem !important;
+}
+.mt-7,
+.my-7 {
+  margin-top: 8rem !important;
+}
+
 .mr-5,
 .mx-5 {
   margin-right: 3rem !important; }
