@@ -35,7 +35,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div class="btn-group dropright">
-                            <button tpye="button" class="dropdown-item btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Action</a>
+                            <button tpye="button" class="dropdown-item btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Teknologi</a>
                         </div>
                         <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
@@ -65,9 +65,9 @@
         <h3>
                <small class="text-muted">Kursus yang anda ikuti</small>
              </h3>
-        <div class="card-deck">
+        <div class="card-deck"onclick="location.href='#';" style="cursor: pointer;">
 
-            <div class="card mx-1 shadow-sm" onclick="location.href='#';" style="cursor: pointer;">
+            <div class="card mx-1 shadow-sm">
                 <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
