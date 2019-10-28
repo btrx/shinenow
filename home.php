@@ -61,28 +61,58 @@
         </div>
     </nav>
     <nav>
-        <div class="container mt-4 card-deck-wrapper">
-            <h3>
+    <div class="container mt-6">
+        <h3>
                <small class="text-muted">Kursus yang anda ikuti</small>
-            </h3>
-            <div class="card-deck">
-                <div class="card flex-row flex=wrap">
-                    <a href="#" class="btn btn-fix text-left"></a>
-                    <div class="card-header border-0">
-                        <img src="images/sponbob.png" alt="" style="width:227px; height:125px ">
-                    </div>
-                    <div class="card-block px-2">
-                        <h4 class="card-text">Tittle</h4>
-                        <p class="card-text">desc</p>
-                        <a href="#" class="btn btn-primary">btn</a>
-                    </div>
-                    <div class="progress"></div>
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%;height:14px">
-                        40%
-                    </div>
+             </h3>
+        <div class="card-deck">
+
+            <div class="card mx-1 shadow-sm" onclick="location.href='#';" style="cursor: pointer;">
+                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <div class="card-body px-2">
+                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <p class="card-text" style="font-size: 11px;">Petrik</p>
+                    <div class="progress-bar bg-warning" style="width:45%;height:15px">45%</div>
+                </div>
+            </div>
+
+            <div class="card mx-1 ">
+                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <div class="card-body px-2">
+                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <p class="card-text" style="font-size: 11px;">Petrik</p>
+                    <div class="progress-bar bg-warning" style="width:10%;height:15px">10%</div>
+                </div>
+            </div>
+
+            <div class="card mx-1 ">
+                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <div class="card-body px-2">
+                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <p class="card-text" style="font-size: 11px;">Petrik</p>
+                    <div class="progress-bar bg-warning" style="width:10%;height:15px">10%</div>
+                </div>
+            </div>
+
+            <div class="card mx-1 ">
+                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <div class="card-body px-2">
+                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <p class="card-text" style="font-size: 11px;">Petrik</p>
+                    <div class="progress-bar bg-warning" style="width:10%;height:15px">10%</div>
+                </div>
+            </div>
+
+            <div class="card mx-1 ">
+                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <div class="card-body px-2">
+                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <p class="card-text" style="font-size: 11px;">Petrik</p>
+                    <div class="progress-bar bg-warning" style="width:10%;height:15px">10%</div>
                 </div>
             </div>
         </div>
+    </div>
     </nav>
     <div class="container mt-6">
         <h3>
