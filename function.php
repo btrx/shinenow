@@ -109,6 +109,28 @@ function cari($keyword){
 	return user($result);
 }
 
+// admin
+// function admin_b($data){
+// 	global $conn;
+
+// 	// ambil data user
+// 	$result = mysqli_query($conn, $data);
+// 	$rows = [];
+// 	while ($row = mysqli_fetch_assoc($result)) {
+// 		$rows[] = $row;
+// 	}
+// 	return $rows;
+// }
+
+// cari admin
+// function cari_admin($keyword){
+// 	global $conn;
+
+// 	$result = "SELECT * FROM admin WHERE nama LIKE '%$keyword%'";
+		
+// 	return admin_b($result);
+// }
+
 // super admin
 function admin($admin) {
 		global $conn;
