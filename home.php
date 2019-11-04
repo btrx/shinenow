@@ -8,9 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="assets/css/custom-style.css">
+    <link rel="stylesheet" href="assets/css/frontend.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Shine Now</title>
 </head>
@@ -18,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white" style="width: 1349px; height: 65px">
         <a class="navbar-brand mb-3" href="#">
-            <img src="images/logo.png" width="100px">
+            <img src="assets/img/logo.png" width="100px">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,20 +29,34 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
             <ul class="navbar-nav mr-auto container-fluid">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mt-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-list-ul"></i> Kategori
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div class="btn-group dropright">
-                            <button tpye="button" class="dropdown-item btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Teknologi</a>
-                        </div>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mt-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-list-ul"></i> Kategori
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Teknologi </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="test" tabindex="-1" href="#">Web Programming</a></li>
+                            <li><a class="test" tabindex="-1" href="#">Machine Learning</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Bahasa </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="test" tabindex="-1" href="#">Bahasa Inggris</a></li>
+                            <li><a class="test" tabindex="-1" href="#">Bahasa Indonesia</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Sains </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="test" tabindex="-1" href="#">Kimia</a></li>
+                            <li><a class="test"tabindex="-1" href="#">Fisika</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </li>
 
                 <li class="nav-item col-8">
                     <form class="form-inline my-2 my-lg-0 inbutton">
@@ -52,11 +67,11 @@
                 </li>
 
             </ul>
-            <a class="nav-link btn btn-light  mx-2" href="tutor.php">Jadilah tutor</a>
+            <a class="nav-link btn btn-light  mx-2" href="courses/index.php">Jadilah tutor</a>
             <div class="dropdown show">
                 <a class="button rounded-circle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="20px" height="20px">
-                      U
-                      </a>
+                    U
+                </a>
             </div>
         </div>
     </nav>
@@ -65,10 +80,10 @@
         <h3>
                <small class="text-muted">Kursus yang anda ikuti</small>
              </h3>
-        <div class="card-deck"onclick="location.href='#';" style="cursor: pointer;">
+        <div class="card-deck">
 
-            <div class="card mx-1 shadow-sm">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+            <div class="card mx-1 shadow-sm" onclick="location.href='course.php';" style="cursor: pointer;">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -77,7 +92,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -86,7 +101,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -95,7 +110,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -104,7 +119,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -123,7 +138,7 @@
             <div class="card mx-1 shadow-sm">
                 <span class="badge  badge-warning w-50 mt-2" style="position: absolute; z-index: 3">TERBAIK</span>
 
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -139,7 +154,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -157,7 +172,7 @@
             <div class="card mx-1 ">
                 <span class="badge  badge-warning w-50 mt-2" style="position: absolute; z-index: 3">TERBAIK</span>
 
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -173,7 +188,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -191,7 +206,7 @@
             <div class="card mx-1 ">
                 <span class="badge  badge-warning w-50 mt-2" style="position: absolute; z-index: 3">TERBAIK</span>
 
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -218,7 +233,7 @@
 
             <div class="card mx-1 ">
                 <span class="badge  badge-warning w-50 mt-2" style="position: absolute; z-index: 3">TERBAIK</span>
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -234,7 +249,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -250,7 +265,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -266,7 +281,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -282,7 +297,7 @@
             </div>
 
             <div class="card mx-1 ">
-                <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
+                <img class="card-img-top h-50" src="assets/img/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
                     <h6>Teknik membersihkan hidung yang mantab</h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
@@ -329,7 +344,7 @@
             <div class="col-md-4">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik2.png" style="height: 250px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik2.png" style="height: 250px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -338,7 +353,7 @@
             <div class="col-md-4">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik3.png" style="height: 250px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik3.png" style="height: 250px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -347,7 +362,7 @@
             <div class="col-md-4">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik4.png" style="height: 250px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik4.png" style="height: 250px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -362,7 +377,7 @@
             <div class="col-md-3">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik5.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik5.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -372,7 +387,7 @@
             <div class="col-md-3">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik2.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik2.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -381,7 +396,7 @@
             <div class="col-md-3">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik3.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik3.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -390,7 +405,7 @@
             <div class="col-md-3">
                 <a href="#">
                     <figure class="figure">
-                        <img src="images/petrik4.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="assets/img/petrik4.png" style="height: 150px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption text-center">
                             lorem</figcaption>
                     </figure>
@@ -490,7 +505,7 @@
 
         </div>
     </div>
-    nav class="nav mt-5 ml-3" style="font-size: 12px;">
+    <nav class="nav mt-5 ml-3" style="font-size: 12px;">
     <span class="nav-link active text-muted font-weight-bold">Halaman lokal</span>
     <span class="nav-link">Bahasa</span>
     <a class="nav-link text-info" href="#">English</a>
@@ -503,7 +518,7 @@
 
     <div class="row" style="font-size: 12px;">
         <div class="col pl-5">
-            <img src="images/logo.png" width="90px" class="mr-5"> <span>Copyright © 2049 ShineNow, Inc.</span>
+            <img src="assets/img/logo.png" width="90px" class="mr-5"> <span>Copyright © 2049 ShineNow, Inc.</span>
         </div>
         <div class="col">
             <ul class="nav justify-content-end">
@@ -526,13 +541,19 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
         $(function() {
             $('[data-toggle="popover"]').popover()
         })
+    </script>
+    <script>
+    $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+    });
+    });
     </script>
 
 </body>

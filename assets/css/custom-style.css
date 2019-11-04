@@ -1,0 +1,9 @@
+.big-banner{
+    background-image: url('/shinenow/assets/img/mbak.jpg');
+    background-size: 100%;
+}
+
+.fresh-content{
+    background: linear-gradient(-45deg,#FDC661,#977821);
+}
+
