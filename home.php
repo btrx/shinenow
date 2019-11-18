@@ -1,3 +1,7 @@
+<?php 
+    $result = mysqli_query($con, "SELECT * FROM tbl_materi");
+ ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -13,6 +17,11 @@
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Shine Now</title>
+    <style type="text/css">
+        body a{
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,24 +76,25 @@
              </h3>
         <div class="card-deck"onclick="location.href='#';" style="cursor: pointer;">
 
-            <div class="card mx-1 shadow-sm">
+            <!-- <div class="card mx-1 shadow-sm">
                 <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
-                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <h6><a href="media.php?hal=d_home">Belajar dasar dasar-dasar PHP</a></h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
                     <div class="progress-bar bg-warning" style="width:45%;height:15px">45%</div>
-                </div>
-            </div>
-
+                </div> -->
+           <!--  </div> -->
+            <?php while($r=mysqli_fetch_array($result)) : ?>
+         
             <div class="card mx-1 ">
                 <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
-                    <h6>Teknik membersihkan hidung yang mantab</h6>
+                    <h6><a href="media.php?hal=d_home&topik=<?= $r['topik'] ;?>"><?= $r['topik']; ?></a></h6>
                     <p class="card-text" style="font-size: 11px;">Petrik</p>
                     <div class="progress-bar bg-warning" style="width:10%;height:15px">10%</div>
                 </div>
             </div>
-
+            <?php endwhile; ?>
             <div class="card mx-1 ">
                 <img class="card-img-top h-50" src="images/petrik.png" alt="Card image cap">
                 <div class="card-body px-2">
