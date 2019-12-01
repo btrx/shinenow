@@ -1,0 +1,22 @@
+.big-banner{
+    background-image: url('../images/mbak.jpg');
+    background-size: 100%;
+}
+
+.fresh-content{
+    background: linear-gradient(-45deg,#FDC661,#977821);
+}
+
+.kotak {
+	width: 218px;
+	height: 300px;
+	/*overflow: hidden;*/
+
+}
+
+/*.kotak2 {
+	width: 100%
+	overflow: auto;
+	float: left;
+}
+*/

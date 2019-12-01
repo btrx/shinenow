@@ -1,23 +1,3 @@
-<?php 
-  require "function.php";
-  if(isset($_POST["register"])) {
-    if(registrasi($_POST) > 0) {
-      echo "<script>
-              alert ('Selamat, registrasi berhasil');
-              document.location.href = 'login.php';
-            </script>";
-     // header ("Location: login.php");
-    } else {
-      echo mysqli_error($conn);
-    }
-
-
-  }
-
-
- ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,54 +9,92 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Halaman Registrasi</title>
+    <style type="text/css">
+      label,input,select,textarea{
+        margin-left: 0px;
+      }
+    </style>
   </head>
   <body>
-    <div style="width: 500px; margin: 20px auto 0px;background-color: #eee; padding-left: 75px;">
+  <?php
+include "config/koneksi.php";
+if(isset($_POST['submit'])){
+    $simpan="INSERT INTO tbl_user SET username='$_POST[username]',
+                                      password='".md5($_POST["password"])."',
+                                      nama='$_POST[nama]',
+                                      tgl_lahir='$_POST[tgl_lahir]',
+                                      jk='$_POST[jk]',                                      
+                                      kwgn='$_POST[kwgn]',
+                                      sekolah_asal='$_POST[sekolah_asal]',
+                                      telp='$_POST[telp]',
+                                      alamat='$_POST[alamat]'";
+    mysqli_query($con,$simpan);
+    echo '<script language="javascript">
+    alert("Anda Berhasil Melakukan Registrasi");
+    window.location="index.php";
+    </script>';
+    exit();
+}
+?>
+    <div style="width: 500px; margin: 20px auto 0px;background-color: #eee; padding-left: 75px; padding-right: 75px;">
         <h2 class="font-weight-bold" style="padding-left: 100px; font-family: arial;">Registrasi</h2>
     <form action="" method="post">
+         
+                               <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nama</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tgl Lahir</label>
+                                    <input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="YYYY-MM-DD">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Jenis Kelamin</label>
+                                    <select name="jk" id="jk" class="form-control">
+                                      <option selected>----Pilih----</option>
+                                      <option value="Laki-Laki">Laki-Laki</option>
+                                      <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Kewarganegaraan</label>
+                                    <select name="kwgn" id="kwgn" class="form-control" >
+                                      <option selected>---Pilih----</option>
+                                      <option value="Indoensia">Indonesia</option>
+                                      <option value="Asing">Asing</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Sekolah Asal / Universitas</label>
+                                    <input type="text" class="form-control" id="sekolah_asal" name="sekolah_asal" placeholder="Sekolah asal">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Telp</label>
+                                    <input type="text" class="form-control" id="telp" name="telp" placeholder="Telpon">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Alamat</label>
+                                    <textarea name="alamat" class="form-control" cols="30" rows="4" id="alamat"></textarea>
+                                </div>
+
           <div class="form-group">
-            <label for="username" class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">
-              <input type="text" name="username" class="form-control" id="username" placeholder="Username" required="required">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="password" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-              <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="required">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
-            <div class="col-sm-10">
-              <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" required="required">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="jns_kelamin" class="col-sm col-form-label">Jenis Kelamin</label>
-            <div class="col-sm-10">
-              <select name="jns_kelamin" class="form-control" id="jns_kelamin">
-                <option>---------</option>
-                <option>Laki-Laki</option>
-                <option>Perempuan</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
-            <div class="col-sm-10">
-              <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Alamat">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="email" name="email" class="form-control" id="email" placeholder="Email">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-10">
-              <button class="btn btn-warning text-center font-weight-bold" style="width: 325px;" type="submit" name="register">Daftar</button>
+              <button class="btn btn-warning text-center font-weight-bold" style="width: 325px;" type="submit" name="submit">Daftar</button>
             </div>
           </div>
           <h6 class="pl-3">Sudah daftar?  <a href="login.php">Klik disini</a></h6>

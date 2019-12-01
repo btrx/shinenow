@@ -11,7 +11,7 @@
 		$admins = admin("SELECT * FROM admin");
 
 		if(isset($_POST["cari"])){
-			$users = cari($_POST["keyword"]);
+			$users = cari_admin($_POST["keyword"]);
 		}
  ?>
 

@@ -8,18 +8,18 @@
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-style.css">
 
-    <title>Shine Now</title>
+    <title>ShineNow</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white" style="width: 1349px; height: 65px">
         <a class="navbar-brand mb-3" href="#">
-            <img src="assets/img/logo.png" width="100px">
+            <img src="images/logo.png" width="100px">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
