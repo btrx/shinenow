@@ -33,9 +33,30 @@ switch($_GET[act]){
           </div>
 
           <div class='form-group'>
+            <label for='inputEmail3' class='col-sm-2 control-label'>Deskripsi</label>
+            <div class='col-sm-5'>
+              <input type=text size=30 class='form-control' name='deskripsi' required>
+            </div>
+          </div>
+
+          <div class='form-group'>
             <label for='inputEmail3' class='col-sm-2 control-label'>Isi Materi</label>
             <div class='col-sm-10'>
-              <textarea name='materi' style='width: 450px; height: 350px;'></textarea>
+              <textarea name='materi' style='width: 790px; height: 350px;'></textarea>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <label for='inputEmail3' class='col-sm-2 control-label'>Video</label>
+            <div class='col-sm-5'>
+              <input type=text size=30 class='form-control' name='video'>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <label for='inputEmail3' class='col-sm-2 control-label'>Cover</label>
+            <div class='col-sm-5'>
+              <input style='margin-top: 7px;' type=file size=30 name='cover'>
             </div>
           </div>
 
@@ -63,9 +84,9 @@ switch($_GET[act]){
                         <div class='form-group'>
                           <label for='inputEmail3' class='col-sm-2 control-label'></label>
                           <div class='col-sm-4'> 
-                        <input type=submit name=submit value=Tambah class='btn btn-primary'>
-                        <input type=button value=Batal onclick=self.history.back() class='btn btn-danger'>
-                        </div>
+                              <input type=submit name=submit value=Tambah class='btn btn-primary'>
+                              <input type=button value=Batal onclick=self.history.back() class='btn btn-danger'>
+                          </div>
                         </div>
                   </form>";
      break;

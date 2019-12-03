@@ -61,7 +61,7 @@
 				hasil= 100 / jumlah soal * jawaban yang benar
 				*/
 				
-				$result=mysqli_query($con, "select * from tbl_soal WHERE aktif='Y'");
+				$result=mysqli_query($con, "select * from tbl_soal WHERE aktif='Y' AND topik='$_SESSION[topik]'");
 				$jumlah_soal=mysqli_num_rows($result);
 				$score = 100/$jumlah_soal*$benar;
 				$hasil = number_format($score,1);

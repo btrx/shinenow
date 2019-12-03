@@ -22,7 +22,7 @@
 	$t=mysqli_fetch_array($qry);
 
   if(isset($_POST['submit'])){
-    $update="UPDATE tbl_user set username='".$_POST['username']."',password='".md5($_POST['password'])."',nama='".$_POST['nama']."',tgl_lahir='".$_POST['tgl_lahir']."',jk='".$_POST['jk']."',agama='".$_POST['agama']."',kwgn='".$_POST['kwgn']."',nama_ayah='".$_POST['nama_ayah']."',pekerjaan_ayah='".$_POST['pekerjaan_ayah']."',nama_ibu='".$_POST['nama_ibu']."',sekolah_asal='".$_POST['sekolah_asal']."',telp='".$_POST['telp']."',alamat='".$_POST['alamat']."' where id_user='".$_SESSION['iduser']."' ";
+    $update="UPDATE tbl_user set username='".$_POST['username']."', nama='".$_POST['nama']."',tgl_lahir='".$_POST['tgl_lahir']."',jk='".$_POST['jk']."', kwgn='".$_POST['kwgn']."',sekolah_asal='".$_POST['sekolah_asal']."',telp='".$_POST['telp']."',alamat='".$_POST['alamat']."' where id_user='".$_SESSION['iduser']."' ";
     mysqli_query($con,$update);
   
     echo '<script language="javascript">
@@ -34,14 +34,16 @@
 ?>
 
 <form name="form1" method="post" action="">
-  <div class="form-group">
+                            <div style="width: 400px; display: inline-block;margin-left: 25px;">
+                                <div class="form-group">
                                     <label>Username</label>
                                     <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?php echo $t['username'] ?>">
 
                                 </div>
+
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" value="<?php echo $t['password'] ?>>
                                 </div>
 
                                 <div class="form-group">
@@ -53,7 +55,9 @@
                                     <label>Tgl Lahir</label>
                                     <input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="YYYY-MM-DD" value="<?php echo $t['tgl_lahir'] ?>">
                                 </div>
+                            </div>
 
+                            <div style="width: 400px; display: inline-block;margin-left: 140px;">
                                 <div class="form-group">
                                     <label>Jenis Kelamin</label>
                                     <select name="jk" id="jk" class="form-control">
@@ -62,20 +66,6 @@
                                       <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </div>
-
-
-                                <div class="form-group">
-                                    <label>Agama</label>
-                                    <select name="agama" id="agama" class="form-control" >
-                                      <option selected>---Pilih---</option>
-                                      <option value="Islam">Islam</option>
-                                      <option value="Budha">Budha</option>
-                                      <option value="Hindu">Hindu</option>
-                                      <option value="Kristen">Kristen</option>
-                                      <option value="Khatolik">Khatolik</option>
-                                    </select>
-                                </div>
-
 
                                 <div class="form-group">
                                     <label>Kewarganegaraan</label>
@@ -87,29 +77,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Nama Ayah</label>
-                                    <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" placeholder="Nama Ayah" value="<?php echo $t['nama_ayah'] ?>">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Pekerjaan Ayah</label>
-                                    <input type="text" class="form-control" id="pekerjaan_ayah" name="pekerjaan_ayah" placeholder="Pekerjaan Ayah" value="<?php echo $t['pekerjaan_ayah'] ?>">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label>Nama Ibu</label>
-                                    <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" placeholder="Nama Ibu" value="<?php echo $t['nama_ibu'] ?>">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label>Pekerjaan Ibu</label>
-                                    <input type="text" class="form-control" id="pekerjaan_ibu" name="pekerjaan_ibu" placeholder="Pekerjaan Ibu" value="<?php echo $t['pekerjaan_ibu'] ?>">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Sekolah Asal</label>
+                                    <label>Sekolah Asal/Perguruan Tinggi</label>
                                     <input type="text" class="form-control" id="sekolah_asal" name="sekolah_asal" placeholder="Sekolah asal" value="<?php echo $t['sekolah_asal'] ?>">
                                 </div>
 
@@ -117,7 +85,7 @@
                                     <label>Telp</label>
                                     <input type="text" class="form-control" id="telp" name="telp" placeholder="Telpon" value="<?php echo $t['telp'] ?>">
                                 </div>
-
+                            </div>
                                 <div class="form-group">
                                     <label>Alamat</label>
                                     <textarea name="alamat" class="form-control" cols="30" rows="4" id="alamat"><?php echo $t['alamat'] ?></textarea>

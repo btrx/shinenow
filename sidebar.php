@@ -6,7 +6,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="media.php?hal=home">ShineNow</a>
+                <a class="navbar-brand" href="media.php?hal=home">
+                     <img src="images/logo.png" width="100px" style="margin-top: -15px;">
+                </a>
             </div>
             <!-- /.navbar-header -->
 

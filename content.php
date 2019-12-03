@@ -6,7 +6,7 @@ if ($_GET[hal]=="soal") {
 	include "soal.php";
 }
 elseif ($_GET[hal]=="home") {
-	//include "sidebar.php";
+	//include "side_home.php";
 	include "home.php";
 }
 elseif ($_GET[hal]=="d_home") {
@@ -28,6 +28,14 @@ elseif ($_GET[hal]=="jawaban") {
 elseif ($_GET[hal]=="profiluser") {
 	include "sidebar.php";
 	include "profileuser.php";
+}
+elseif ($_GET[hal]=="simpanmateri") {
+	//include "sidebar.php";
+	include "simpan_materi.php";
+}
+elseif ($_GET[hal]=="caritopik") {
+	//include "sidebar.php";
+	include "cari_topik.php";
 }
 elseif ($_GET[hal]=="profil") {
 	include "sidebar.php";

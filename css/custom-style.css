@@ -7,3 +7,31 @@
     background: linear-gradient(-45deg,#FDC661,#977821);
 }
 
+.kotak {
+	width: 218px;
+	height: 300px;
+	/*overflow: hidden;*/
+
+}
+
+.bg-index{
+	position: relative;
+	background-image: url('../images/teknologi.jpg');
+	height: 700px;
+	width: 100%;
+	margin: 0 0%;
+	background-repeat: repeat-x;
+	animation : animate 20s linear infinite alternate;
+}
+
+@keyframes animate {
+	0%{
+		background-image: url('../images/animasi.jpg');
+	} 50% {
+		background-image: url('../images/globe.png');
+	}
+	100% {
+		background-position: 100% 0;
+	}
+}
+*/

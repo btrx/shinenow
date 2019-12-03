@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">ShineNow</a>
+                <a class="navbar-brand" href="media.php?module=home"><img src="../images/logo.png" width="100px" style="margin-top: -15px;"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -43,7 +43,7 @@
                        
 
                         <li>
-                            <a href="?module=tambah_soal"><i class="fa fa-file fa-fw"></i> Kelola Materi</a>
+                            <a href="?module=tambah_soal&halaman=1"><i class="fa fa-file fa-fw"></i> Kelola Materi</a>
                         </li>
 
                         <li>

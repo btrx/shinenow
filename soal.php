@@ -10,8 +10,8 @@
                 
                 <div class="row">
                     <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
+                    <div class="panel panel-primary" style="background-color: #e6f5a4">
+                        <div class="panel-heading" style="background-color: #ebc934;">
                            Soal
                         </div>
                         <div class="panel-body">
@@ -49,13 +49,13 @@ else{
 
 		}
 		else {
-	//echo '<table><tr><th>Waktu Anda</th></tr>
+		//echo '<table><tr><th>Waktu Anda</th></tr>
 		//  <tr><td align=center><span style="font-size:18px"><span id="menit"></span>:<span id="detik"></span></span> </td></tr></table>';
 		echo "<div style='width:100%; border: 1px solid #EBEBEB; overflow:scroll;height:700px;'>";
  		echo '<table width="100%" border="0">';
 
 		include "config/koneksi.php";
-		$hasil=mysqli_query($con,"select * from tbl_soal Where topik='$_SESSION[topik]' ORDER BY RAND ()");
+		$hasil=mysqli_query($con,"select * from tbl_soal Where topik='$_SESSION[topik]' AND aktif='Y' ORDER BY RAND ()");
 		$jumlah=mysqli_num_rows($hasil);
 		//var_dump($hasil);
 		$urut=0;
@@ -160,7 +160,7 @@ else{
 	</script><?php } } ?>
 
  </div>
-                        <div class="panel-footer">
+                        <div class="panel-footer" style="background-color: #e6f5a4;">
                            
                         </div>
                     </div>

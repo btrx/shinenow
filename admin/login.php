@@ -32,7 +32,6 @@
             </div>
           </div>
           <h6 class="pl-3">Belum daftar?  <a href="registrasi.php">Klik disini</a></h6>
-          <a href="../login.php">login user</a>
     </form>
     </div>
 

@@ -1,3 +1,14 @@
+<?php 
+
+if (isset($_GET['tutor'])) {
+    echo "<script>
+        alert ('Silahkan login. Jika belum punya akun silahkan Daftar');
+        window.location = 'login.php';
+    </script>";
+}
+
+ ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -12,13 +23,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom-style.css">
 
-    <title>Shine Now</title>
+    <title>ShineNow</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white" style="width: 1349px; height: 65px">
-        <a class="navbar-brand mb-3" href="#">
+        <a class="navbar-brand mb-3" href="index.php">
             <img src="images/logo.png" width="100px">
         </a>
 
@@ -30,7 +41,7 @@
 
             <ul class="navbar-nav mr-auto container-fluid">
             </ul>
-            <a class="nav-link btn btn-light  mx-2" href="#">Jadilah tutor</a>
+            <a class="nav-link btn btn-light  mx-2" href="?tutor=no">Jadilah tutor</a>
             <a class="nav-link btn btn-outline-dark" href="login.php">Masuk</a>
             <a class="nav-link btn btn-danger mx-2" href="registrasi.php">Daftar</a>
 
@@ -99,8 +110,8 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-        <h3>
+    <div class=" bg-index">
+        <!-- <h3>
                <small class="text-muted">Kursus Populer "Teknologi"</small>
              </h3>
         <div class="card-deck">
@@ -191,11 +202,11 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
     </div>
 
-    <div class="container mt-5">
+    <!-- <div class="container mt-5">
         <h3>
                 <small class="text-muted">Kelas Populer "Developer"</small>
               </h3>
@@ -340,10 +351,10 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
-    <div class="container mt-3">
-        <div class="row">
+    <!-- <div class="container mt-3"> -->
+       <!--  <div class="row">
             <div class="col-md-3">
                 <a href="#">
                     <figure class="figure">
@@ -412,17 +423,17 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
     <div class="row pt-5 px-3 border-top mt-5 " style="font-size: 13px;">
         <div class="col">
 
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link text-info" href="#"><b>Jadilah tutor</b></a>
+                    <a class="nav-link text-info" href="#">Jadilah tutor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info" href="#"><b>Ikuti kelas</b></a>
+                    <a class="nav-link text-info" href="#">Ikuti kelas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-info" href="#">Mobile Apps</a>

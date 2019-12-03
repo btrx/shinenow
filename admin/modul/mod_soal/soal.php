@@ -40,7 +40,7 @@ switch($_GET[act]) {
   // Tombol Tambah Soal
   echo "<div style='text-align:left;padding-left:30px;'>
           <input class='btn btn-primary' type=button value='Tambah Soal' 
-          onclick=\"window.location.href='?module=soal&act=tambahsoal';\">";
+          onclick=\"window.location.href='?module=soal&act=tambahsoal&topik=$_GET[topik]';\">";
   //Form Pencarian Data
   echo "<div style='text-align:right;padding-right:30px;'>
          <form method='POST' action=?module=soal&act=carisoal>
@@ -106,7 +106,7 @@ switch($_GET[act]) {
                           <label for='inputEmail3' class='col-sm-2 control-label'>Gambar</label>
                           <div class='col-sm-10'>
                             <input type=file name='fupload' size=40> 
-                                          <br>Tipe gambar harus JPG/JPEG dan ukuran lebar maks: 400 px
+                            <br>Tipe gambar harus JPG/JPEG dan ukuran lebar maks: 400 px
                           </div>
                         </div>
 
@@ -165,9 +165,11 @@ switch($_GET[act]) {
   case "tambahmateri":
    $sql  = mysqli_query($con,"SELECT * FROM tbl_materi WHERE topik ='$_GET[topik]'");
     $r    = mysqli_fetch_array($sql);
-    //var_dump($_GET[topik]);
+    //var_dump($r[cover]);
     echo "<h2>Isi Materi</h2>
           <form method=POST class='form-horizontal' action='$aksi?module=soal&act=tambahmateri&id=$r[id]&topik=$_GET[topik]' enctype='multipart/form-data'>
+
+                      <input type=hidden name='cover' value='$r[cover]'>
           
                        
                        <div class='form-group'>
@@ -178,9 +180,31 @@ switch($_GET[act]) {
                         </div>
 
                         <div class='form-group'>
+                          <label for='inputEmail3' class='col-sm-2 control-label'>Deskripsi</label>
+                          <div class='col-sm-4'>
+                            <input type=text name='deskripsi' value='$r[deskripsi]' class='form-control' size=80 />
+                          </div>
+                        </div>
+
+                        <div class='form-group'>
                           <label for='inputEmail3' class='col-sm-2 control-label'>Isi Materi</label>
                           <div class='col-sm-10'>
-                            <textarea name='materi' style='width: 500px; height: 300px;'>$r[materi]</textarea>
+                            <textarea name='materi' style='width: 790px; height: 300px;'>$r[materi]</textarea>
+                          </div>
+                        </div>
+
+                        <div class='form-group'>
+                          <label for='inputEmail3' class='col-sm-2 control-label'>Video</label>
+                          <div class='col-sm-4'>
+                            <input type=text name='video' value='$r[video]' class='form-control' size=80 />
+                          </div>
+                        </div>
+
+                        <div class='form-group'>
+                          <label for='inputEmail3' class='col-sm-2 control-label'>Cover</label>
+                          <div class='col-sm-5'>
+                            <img src='modul/mod_soal/img/$r[cover]' width='100px'><br>
+                            <input type=file size=30 name='cover'>
                           </div>
                         </div>
 
@@ -339,9 +363,9 @@ switch($_GET[act]) {
 ?>
 
                         </div>
-                        <div class="panel-footer">
+                       <!--  <div class="panel-footer">
                            
-                        </div>
+                        </div> -->
                     </div>
                     </div>    
                 </div>

@@ -11,30 +11,56 @@
                 </div>
                 
                 <div class="row">
+                    <?php
+                    if(isset($_GET[topik]) == ''){
+                        $_SESSION[topik];
+                    } else
+                     {
+                        $_SESSION[topik] = $_GET[topik];
+                    }
+                        $iduser = $_SESSION['iduser'];
+
+                        $result = mysqli_query($con, "SELECT * FROM tbl_simpanmateri WHERE id_user = '$iduser' AND topik = '$_SESSION[topik]'");
+                        $ada = mysqli_affected_rows($con);
+                       //var_dump($_GET[topik]);
+                        if($ada > 0) {?>
+                              <button style=" margin: 10px 16px; font-weight: bold; background-color: #ebc934;" class="btn"><a href=?hal=simpanmateri&tipe=hapus&topik=<?= $_GET[topik] ?>>SELESAI</a></button>
+                  
+                    <?php } else {  ?>
+                            <button style=" margin: 10px 16px; font-weight: bold; background-color: #ebc934;" class="btn"><a href=?hal=simpanmateri&topik=<?= $_SESSION[topik] ?>>Tambahkan</a></button>
+                    <?php } ?>
                     <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
+                    <div class="panel panel-primary" style="background-color: #e6f5a4">
+                        <div class="panel-heading" style="background-color: #ebc934;">
                            Materi
                         </div>
                         <div class="panel-body">
-                          
+                       
 <?php
 $result=mysqli_query($con, "select * from tbl_soal WHERE aktif='Y'");
 $hitung=mysqli_num_rows($result);
 
-if(isset($_GET[topik]) == ''){
-    $_SESSION[topik];
-} else {
-$_SESSION[topik] = $_GET[topik];
-}
-
 
 		$qry=mysqli_query($con, "SELECT * FROM tbl_materi where topik = '$_SESSION[topik]'");
 		$r=mysqli_fetch_array($qry);
-		echo "
+
+        $video = explode('=', $r[video]);
+        $b = explode('&', $video[1]);
+        $v = "https://www.youtube.com/embed/".$b[0];
+        //var_dump($v);
+
+?>
+<?php if($r[video] != '') { ?>
+        <div>
+            <iframe width="800" height="500" style="margin:10px 90px;" src=<?= $v; ?>></iframe>
+        </div>
+<?php } ?>
+<?php 
+		echo "    
 		$r[materi]<br/>
 		";
-?>
+ ?>
+
 <script>
  function cekForm() {
 	if (!document.fValidate.agree.checked) {
@@ -51,7 +77,7 @@ $_SESSION[topik] = $_GET[topik];
 </form>
 
                         </div>
-                        <div class="panel-footer">
+                        <div class="panel-footer" style="background-color: #e6f5a4">
                            
                         </div>
                     </div>

@@ -32,11 +32,11 @@ switch($_GET[act]){
              <td>$r[username]</td>
             <td>$r[nama]</td>
             <td>$r[benar]</td>
-        <td>$r[salah]</td>
-        <td>$r[kosong]</td>
-        <td>$r[score]</td>
-        <td>$tgl</td>
-        <td>$r[keterangan]</td>
+            <td>$r[salah]</td>
+            <td>$r[kosong]</td>
+            <td>$r[score]</td>
+            <td>$tgl</td>
+            <td>$r[keterangan]</td>
    <td><input type=button value='Hapus' class='btn btn-danger' onclick=\"window.location.href='$aksi?module=hasilujian&act=hapus&id=$r[id_nilai]';\">
    </td>
       </tr>";

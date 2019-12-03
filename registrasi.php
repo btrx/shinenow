@@ -23,13 +23,8 @@ if(isset($_POST['submit'])){
                                       password='".md5($_POST["password"])."',
                                       nama='$_POST[nama]',
                                       tgl_lahir='$_POST[tgl_lahir]',
-                                      jk='$_POST[jk]',
-                                      agama='$_POST[agama]',
+                                      jk='$_POST[jk]',                                      
                                       kwgn='$_POST[kwgn]',
-                                      nama_ayah= '$_POST[nama_ayah]',
-                                      nama_ibu='$_POST[nama_ibu]',
-                                      pekerjaan_ayah='$_POST[pekerjaan_ayah]',
-                                      pekerjaan_ibu='$_POST[pekerjaan_ibu]',
                                       sekolah_asal='$_POST[sekolah_asal]',
                                       telp='$_POST[telp]',
                                       alamat='$_POST[alamat]'";
@@ -47,16 +42,16 @@ if(isset($_POST['submit'])){
          
                                <div class="form-group">
                                     <label>Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="">
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
                                 </div>
 
                                 <div class="form-group">
                                     <label>Nama</label>
-                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
+                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required="">
                                 </div>
 
                                 <div class="form-group">
@@ -73,20 +68,6 @@ if(isset($_POST['submit'])){
                                     </select>
                                 </div>
 
-
-                                <div class="form-group">
-                                    <label>Agama</label>
-                                    <select name="agama" id="agama" class="form-control" >
-                                      <option selected>---Pilih---</option>
-                                      <option value="Islam">Islam</option>
-                                      <option value="Budha">Budha</option>
-                                      <option value="Hindu">Hindu</option>
-                                      <option value="Kristen">Kristen</option>
-                                      <option value="Khatolik">Khatolik</option>
-                                    </select>
-                                </div>
-
-
                                 <div class="form-group">
                                     <label>Kewarganegaraan</label>
                                     <select name="kwgn" id="kwgn" class="form-control" >
@@ -94,28 +75,6 @@ if(isset($_POST['submit'])){
                                       <option value="Indoensia">Indonesia</option>
                                       <option value="Asing">Asing</option>
                                     </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Nama Ayah</label>
-                                    <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" placeholder="Nama Ayah">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Pekerjaan Ayah</label>
-                                    <input type="text" class="form-control" id="pekerjaan_ayah" name="pekerjaan_ayah" placeholder="Pekerjaan Ayah">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label>Nama Ibu</label>
-                                    <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" placeholder="Nama Ibu">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label>Pekerjaan Ibu</label>
-                                    <input type="text" class="form-control" id="pekerjaan_ibu" name="pekerjaan_ibu" placeholder="Pekerjaan Ibu">
                                 </div>
 
                                 <div class="form-group">
